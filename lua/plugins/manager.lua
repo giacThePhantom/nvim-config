@@ -13,6 +13,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
+  -- Optimization
+  'lewis6991/impatient.nvim',
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',

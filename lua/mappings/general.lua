@@ -17,7 +17,6 @@ map('n', '<leader>q', vim.diagnostic.setloclist, { desc = "Open diagnostics list
 map('i', '<C-l>', '<c-g>u<Esc>[s1z=`]a<c-g>u', {noremap = true})
 
 
-
 map('n', '<C-h>', '<C-w>h')
 map('n', '<C-j>', '<C-w>j')
 map('n', '<C-j>', '<C-w>j')
