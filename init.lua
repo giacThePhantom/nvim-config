@@ -25,6 +25,7 @@ require('options/vimtex')
 require('options/luasnip')
 require('mappings/luasnip')
 require('snippets/latex')
+require('notebook')
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
