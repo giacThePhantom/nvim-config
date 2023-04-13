@@ -7,13 +7,13 @@ map({'i', 's'}, '<C-s>', function()
   end
 end, {noremap = true})
 
-map({'i', 's'}, '<c-j>', function()
+map({'i', 's'}, '<c-a>', function()
   if ls.jumpable(-1) then
     ls.jump(-1)
   end
 end, {noremap = true})
 
-map('i', '<c-h>', function()
+map('i', '<c-q>', function()
   if ls.choice_active() then
     ls.change_choice(1)
   end

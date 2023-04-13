@@ -7,6 +7,7 @@ local fmt = require("luasnip.extras.fmt").fmt
 
 
 
+
 ls.add_snippets("python", {
     ls.snippet(
       {
@@ -143,5 +144,6 @@ ls.add_snippets("python", {
       {i(1)}
       )
     ),
+
   }
 )

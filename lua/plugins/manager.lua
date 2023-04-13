@@ -145,5 +145,13 @@ require('lazy').setup({
     dependencies = {
       'tpope/vim-repeat'
     }
+  },
+   {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup({})
+    end,
   }
 }, {})
