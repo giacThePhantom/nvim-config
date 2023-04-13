@@ -24,8 +24,12 @@ require('plugins/mason')
 require('options/vimtex')
 require('options/luasnip')
 require('mappings/luasnip')
+require('options/magma')
+require('mappings/magma')
+
 require('snippets/latex')
-require('notebook')
+require('snippets/python')
+require('plugins/dap')
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

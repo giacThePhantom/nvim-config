@@ -1,7 +1,7 @@
 local map = vim.keymap.set
 local ls = require('luasnip')
 
-map({'i', 's'}, '<c-k>', function()
+map({'i', 's'}, '<C-s>', function()
   if ls.expand_or_jumpable() then
     ls.expand_or_jump()
   end
