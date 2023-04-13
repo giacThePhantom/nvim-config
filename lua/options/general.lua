@@ -7,6 +7,7 @@ vim.o.ruler = true
 
 -- Make line numbers default
 vim.wo.relativenumber = true
+vim.wo.number = true
 
 vim.wo.conceallevel = 2
 

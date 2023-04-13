@@ -17,6 +17,7 @@ require('autocmd/general')
 require('options/telescope')
 require('mappings/telescope')
 require('options/tree-sitter')
+require('autocmd/tree-sitter')
 require('mappings/lsp')
 require('plugins/neodev')
 require('plugins/nvim-cmp')
@@ -24,12 +25,10 @@ require('plugins/mason')
 require('options/vimtex')
 require('options/luasnip')
 require('mappings/luasnip')
-require('options/magma')
-require('mappings/magma')
-
 require('snippets/latex')
 require('snippets/python')
 require('plugins/dap')
+require('plugins/leap')
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
