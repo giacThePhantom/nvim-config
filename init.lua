@@ -31,6 +31,7 @@ require('plugins/dap')
 require('plugins/leap')
 require('options/dapui')
 require('mappings/dap')
+require('mappings/tagbar')
 
 
 -- The line beneath this is called `modeline`. See `:help modeline`

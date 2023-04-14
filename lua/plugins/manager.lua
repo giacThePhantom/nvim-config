@@ -282,5 +282,8 @@ require('lazy').setup({
 
         )
       end,
+  },
+  {
+    "preservim/Tagbar"
   }
 }, {})
