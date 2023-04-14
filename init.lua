@@ -29,7 +29,9 @@ require('snippets/latex')
 require('snippets/python')
 require('plugins/dap')
 require('plugins/leap')
-require('plugins/copilot')
+require('options/dapui')
+require('mappings/dap')
+
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

@@ -151,7 +151,136 @@ require('lazy').setup({
     cmd = "Copilot",
     event = "InsertEnter",
     config = function()
-      require("copilot").setup({})
+      require("copilot").setup({
+        panel = {
+          enabled = true,
+          auto_refresh = true,
+          keymap = {
+            jump_prev = "[[",
+            jump_next = "]]",
+            accept = "<CR>",
+            refresh = "gr",
+            open = "<M-CR>"
+          },
+          layout = {
+            position = "bottom", -- | top | left | right
+            ratio = 0.4
+          },
+        },
+        suggestion = {
+          enabled = true,
+          auto_trigger = true,
+          debounce = 75,
+          keymap = {
+            accept = "<C-s>",
+            accept_word = false,
+            accept_line = false,
+            next = "<M-]>",
+            prev = "<M-[>",
+            dismiss = "<C-]>",
+          },
+        },
+        filetypes = {
+          yaml = false,
+          markdown = false,
+          help = false,
+          gitcommit = false,
+          gitrebase = false,
+          hgcommit = false,
+          svn = false,
+          cvs = false,
+          ["."] = false,
+        },
+        copilot_node_command = 'node', -- Node.js version must be > 16.x
+        server_opts_overrides = {},
+
+
+      })
     end,
+  },
+  {
+    'luk400/vim-jukit'
+  },
+  {
+	  "ellisonleao/glow.nvim",
+	  config = true,
+	  cmd = "Glow"
+  },
+  {
+    "rcarriga/nvim-dap-UI",
+    config = function()
+      require("dapui").setup({
+      controls = {
+        element = "repl",
+        enabled = true,
+        icons = {
+          disconnect = "",
+          pause = "",
+          play = "",
+          run_last = "",
+          step_back = "",
+          step_into = "",
+          step_out = "",
+          step_over = "",
+          terminate = ""
+        }
+      },
+      element_mappings = {},
+      expand_lines = true,
+      floating = {
+        border = "single",
+        mappings = {
+          close = { "q", "<Esc>" }
+        }
+      },
+      force_buffers = true,
+      icons = {
+        collapsed = "",
+        current_frame = "",
+        expanded = ""
+      },
+      layouts = { {
+          elements = { {
+              id = "scopes",
+              size = 0.25
+            }, {
+              id = "breakpoints",
+              size = 0.25
+            }, {
+              id = "stacks",
+              size = 0.25
+            }, {
+              id = "watches",
+              size = 0.25
+            } },
+          position = "left",
+          size = 40
+        }, {
+          elements = { {
+              id = "repl",
+              size = 0.5
+            }, {
+              id = "console",
+              size = 0.5
+            } },
+          position = "bottom",
+          size = 10
+        } },
+      mappings = {
+        edit = "e",
+        expand = { "<C-e>", "<2-LeftMouse>" },
+        open = "o",
+        remove = "d",
+        repl = "r",
+        toggle = "t"
+      },
+      render = {
+        indent = 1,
+        max_value_lines = 100
+      }
+    }
+
+        )
+      end,
   }
 }, {})
