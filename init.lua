@@ -1,38 +1,43 @@
-require('plugins/manager')
-_G.__luacache_config = {
-  chunks = {
-    enable = true,
-    path = vim.fn.stdpath('cache')..'/luacache_chunks',
-  },
-  modpaths = {
-    enable = true,
-    path = vim.fn.stdpath('cache')..'/luacache_modpaths',
+-- [[ Install `lazy.nvim` plugin manager ]]
+--    https://github.com/folke/lazy.nvim
+--    `:help lazy.nvim.txt` for more info
+local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system {
+    'git',
+    'clone',
+    '--filter=blob:none',
+    'https://github.com/folke/lazy.nvim.git',
+    '--branch=stable', -- latest stable release
+    lazypath,
   }
-}
+end
+vim.opt.rtp:prepend(lazypath)
 
-require('impatient')
-require('mappings/general')
-require('options/general')
-require('autocmd/general')
-require('options/telescope')
-require('mappings/telescope')
-require('options/tree-sitter')
-require('autocmd/tree-sitter')
-require('mappings/lsp')
-require('plugins/neodev')
-require('plugins/nvim-cmp')
-require('plugins/mason')
-require('options/vimtex')
-require('options/luasnip')
-require('mappings/luasnip')
-require('snippets/latex')
-require('snippets/python')
-require('plugins/dap')
-require('plugins/leap')
-require('options/dapui')
-require('mappings/dap')
-require('mappings/tagbar')
+require('packages')
+require('settings')
+require('vanilla_keybindings')
+require('packages/fidget')
+require('packages/which-key')
+require('packages/gitsigns')
+require('packages/lualine')
+require('packages/indent-blankline')
+require('packages/comment')
+require('packages/telescope')
+require('packages/lsp')
+require('packages/neodev')
+require('packages/cmp')
+require('packages/mason')
+require('packages/nvim-dap')
+require('packages/treesitter')
 
+require('packages/nabla')
+require('packages/copilot')
+
+require('packages/vimtex')
+
+require('packages/jukit')
+require('packages/autopep8')
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
