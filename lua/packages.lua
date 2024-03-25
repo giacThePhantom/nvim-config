@@ -100,5 +100,6 @@ require('lazy').setup({
   -- Notebook stuff
   --    'luk400/vim-jukit',
   'tell-k/vim-autopep8',
+  'jamespeapen/Nvim-R',
 
 })
