@@ -1,5 +1,6 @@
 require('lazy').setup({
   -- Git stuff
+  'nvim-neotest/nvim-nio',
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
   'lewis6991/gitsigns.nvim',
@@ -48,7 +49,7 @@ require('lazy').setup({
     'hrsh7th/nvim-cmp',
     dependencies = {
       -- Snippet Engine & its associated nvim-cmp source
-      'L3MON4D3/LuaSnip',
+      {'L3MON4D3/LuaSnip', run ="make install_jsregrexp"},
       'saadparwaiz1/cmp_luasnip',
 
       -- Adds LSP completion capabilities
@@ -101,5 +102,17 @@ require('lazy').setup({
   --    'luk400/vim-jukit',
   'tell-k/vim-autopep8',
   'jamespeapen/Nvim-R',
+  {"vimwiki/vimwiki",
+  init = function()
+    vim.g.mapleader = ' '
+    vim.g.vimwiki_list = {{
+      path = '~/vimwiki/',
+      syntax = 'default',
+      ext = '.wiki',
+    }}
+  end,
 
+  },
+  'echasnovski/mini.icons',
+  'nvim-tree/nvim-web-devicons',
 })

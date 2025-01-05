@@ -18,8 +18,5 @@ set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list
 -- Correcting typos
 set('i', '<C-l>', '<c-g>u<Esc>[s1z=`]a<c-g>u', {noremap = true})
 
--- Better window navigation
-set('n', '<C-h>', '<C-w>h')
-set('n', '<C-j>', '<C-w>j')
-set('n', '<C-k>', '<C-w>k')
-set('n', '<C-l>', '<C-w>l')
+-- Delete buffer
+set('n', '<leader>bk', ":bdelete<CR>", { desc = 'Open diagnostics list' })

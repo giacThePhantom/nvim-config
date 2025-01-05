@@ -12,6 +12,7 @@ vim.o.title = false
 -- Make line numbers default
 vim.wo.relativenumber = true
 vim.wo.number = true
+vim.o.cc = '100'
 
 
 -- Enable mouse mode
@@ -84,3 +85,7 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*" },
   command = [[%s/\n\+\%$//e]],
 })
+-- fold python docstrings
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldmethod = "expr"
+vim.opt.foldtext = ""
