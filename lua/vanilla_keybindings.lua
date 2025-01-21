@@ -19,4 +19,5 @@ set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list
 set('i', '<C-l>', '<c-g>u<Esc>[s1z=`]a<c-g>u', {noremap = true})
 
 -- Delete buffer
-set('n', '<leader>bk', ":bdelete<CR>", { desc = 'Open diagnostics list' })
+set('n', '<leader>bk', ":bdelete<CR>", { desc = 'Deletes open buffer' })
+set('n', '<leader>t', '<leader>ww', { desc = 'Opens TODO File' })

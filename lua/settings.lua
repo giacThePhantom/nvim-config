@@ -89,3 +89,5 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.foldmethod = "expr"
 vim.opt.foldtext = ""
+
+vim.g.vimwiki_global_ext = 0

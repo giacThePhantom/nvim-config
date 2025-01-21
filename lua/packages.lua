@@ -110,6 +110,7 @@ require('lazy').setup({
       syntax = 'default',
       ext = '.wiki',
     }}
+    vim.g.vimwiki_global_ext = 0
   end,
 
   },
